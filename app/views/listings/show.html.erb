@@ -1,1 +1,7 @@
 <h1>this is the place</h1>
+
+<h2>Here are infos regarding: <%= @listing.title %></h2>
+
+<!-- displaying the option to book it -->
+
+<%= link_to "Book this space", new_listing_booking_path(@listing) %>
