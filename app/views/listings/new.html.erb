@@ -1,1 +1,13 @@
-<h1>here?</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Create a new Location to rent</h1>
+
+      <%= simple_form_for @listing do |f| %>
+        <%= f.input :title %>
+        <%= f.input :url %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

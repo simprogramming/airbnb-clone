@@ -1,6 +1,16 @@
-<h1>this is the place</h1>
+<h1 class="my-3" style="text-align: center;"><%= @listing.title %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @listing.url %>)">
+      </div>
+    </div>
+  </div>
+</div>
+<p> <%= link_to "Book this place", new_listing_booking_path(@listing) %> </p>
+<!-- <h1>this is the place</h1>
 
-<h2>Here are infos regarding: <%= @listing.title %></h2>
-<!-- displaying the option to book it -->
-<%= link_to "Book this space", new_listing_booking_path(@listing) %>
+<h2>Here are infos regarding: <%= @listing.title%></h2>
+displaying the option to book it
+<%= link_to "Book this space", new_listing_booking_path(@listing) %> -->
 
