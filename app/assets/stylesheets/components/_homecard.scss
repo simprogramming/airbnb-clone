@@ -1,0 +1,154 @@
+
+.card-paris {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), asset-url('paris.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+    
+  }
+  .card-ny {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), asset-url('newyork.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+  }
+  .card-london {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%),asset-url('london.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+    
+  }
+.city-cards {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        text-decoration: none;
+    }
+}
+
+.card-london:hover{
+    opacity: 1;
+    transition: 0.5s;
+    
+}
+
+.card-paris:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.card-ny:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.card-restaurant {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%),asset-url('restaurant.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+    
+  }
+  .card-mansion {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), asset-url('mansion.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+  }
+  .card-apartment {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), asset-url('apartment.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+    
+  }
+.type-cards {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        text-decoration: none;
+    }
+}
+
+.card-restaurant:hover{
+    opacity: 1;
+    transition: 0.5s;
+    
+}
+
+.card-mansion:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.card-apartment:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
