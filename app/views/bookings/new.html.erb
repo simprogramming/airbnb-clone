@@ -1,0 +1,9 @@
+<h1>Create a New booking</h1>
+<div class="form">
+  <%= simple_form_for [@listing, @booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :time %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+</div>
+<%= link_to "Home" %>
