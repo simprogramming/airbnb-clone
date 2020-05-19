@@ -1,9 +1,28 @@
-<h1>Create a New booking</h1>
+<h1>Create a New booking for: <%= @listing.title %></h1>
+<h2>Tell us about your event</h2>
 <div class="form">
   <%= simple_form_for [@listing, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.input :time %>
+  <%= f.input :start_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year], html5: true, input_html: { min: Date.today.to_s, value: Date.today.to_s } %>
+  <%= f.input :end_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year], html5: true, input_html: { min: Date.today.to_s, value: Date.today.to_s } %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :attendance %>
+  <%= f.hidden_field :listing_id, value: @listing.id %>
   <%= f.button :submit, class: "btn-primary" %>
   <% end %>
 </div>
-<%= link_to "Home" %>
+
+<!-- here is a form about personal infos -->
+<!-- <h3>Tell us a bit more about you</h3>
+<div class="form"> -->
+  <%#3= simple_form_for @user do |f| %>
+  <%#= f.input :first_name %>
+  <%#= f.input :last_name %>
+  <%#= f.input :email %>
+  <%#= f.input :phone %>
+  <%#= f.input :organization %>
+
+  <%#= f.button :submit, class: "btn-primary" %>
+  <%# end %>
+<!-- </div> -->
+
+<%= link_to "Back to Home", root_path %>

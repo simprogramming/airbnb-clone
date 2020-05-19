@@ -1,10 +1,11 @@
-<h1>Display all bookings</h1>
-<h1>Create a New booking</h1>
-<div class="form">
-  <%= simple_form_for [@listing, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.input :time %>
-  <%= f.button :submit, class: "btn-primary" %>
-  <% end %>
-</div>
-<%= link_to "Home" %>
+<h1>Displaying all bookings</h1>
+
+
+<h1><%= @booking.description %></h1>
+
+
+
+
+<%= link_to "Home", root_path%>
+
+
