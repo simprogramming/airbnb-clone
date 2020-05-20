@@ -1,16 +1,15 @@
-<h1 class="my-3" style="text-align: center;"><%= @listing.title %></h1>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @listing.url %>)">
+
+<div class="show-page-container">
+    <div class="show-card" style="background-image: linear-gradient(rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%), url('<%= @listing.url %>')">
+      <h1 class="my-3"><%= @listing.title %></h1>
+      <%= link_to new_listing_booking_path(@listing) do %>
+      <div class="btn"> Book this place </div>
+      <% end %>
+      <div class="information">
+        <i class="fas fa-angle-double-right"></i>
+        <%= @listing.category %>
+        <i class="fas fa-user-friends"></i>
+        <%= @listing.capacity %>
       </div>
     </div>
-  </div>
 </div>
-<p> <%= link_to "Book this place", new_listing_booking_path(@listing) %> </p>
-<!-- <h1>this is the place</h1>
-
-<h2>Here are infos regarding: <%= @listing.title%></h2>
-displaying the option to book it
-<%= link_to "Book this space", new_listing_booking_path(@listing) %> -->
-
