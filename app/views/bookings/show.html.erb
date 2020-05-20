@@ -1,11 +1,20 @@
-<h1>Displaying all bookings</h1>
+<div class="text-align-center">
+  <h1>Booking's Description: <br> <%= @booking.description %></h1>
 
 
-<h1><%= @booking.description %></h1>
+  <h2>Booking's State: <br> <%= @booking.state %></h2>
+
+  <h2>Affiliated Listing: <br> <%= @booking.listing.title %></h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @booking.listing.url %>)">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-
-
-<%= link_to "Home", root_path%>
-
-
+  <%= link_to "Home", root_path%>
+</div>

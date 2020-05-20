@@ -9,6 +9,11 @@ class Listing < ApplicationRecord
   validates :price, presence: true
   validates :capacity, presence: true
   validates :description, presence: true
+
+  validates :type, presence: true
+  # validates :availability, through: :booking
+
   validates :category, presence: true
   # validates :availability
+
 end
