@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_183110) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "state"
+    t.string "state" # confirmed, pending, cancelled?
     t.bigint "user_id", null: false
     t.bigint "listing_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_183110) do
   create_table "listings", force: :cascade do |t|
     t.string "title"
     t.string "location"
-    t.string "availability"
+    t.string "availability" # true or false
     t.string "price"
     t.integer "capacity"
     t.text "description"

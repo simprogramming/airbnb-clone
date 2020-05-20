@@ -1,0 +1,13 @@
+<h1>here is a page where users can see and manage their current bookings, and listings</h1>
+
+<h2>Current Bookings: </h2>
+<% current_user.bookings.each do |booking| %>
+  <p><%= link_to booking.description, listing_booking_path(booking.listing_id, booking.id) %></p>
+<% end %>
+
+<h2>Current Listings: </h2>
+<% current_user.listings.each do |listing| %>
+  <p><%= link_to listing.title, listing_path(listing)%></p>
+<% end %>
+
+<h2>Current requests: </h2>

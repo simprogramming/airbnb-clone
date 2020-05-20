@@ -7,6 +7,8 @@
   <%= f.input :description, as: :text %>
   <%= f.input :attendance %>
   <%= f.hidden_field :listing_id, value: @listing.id %>
+  <%#= f.hidden_field :user_id, value: @listing.user_id %>
+  <%= f.hidden_field :state, value: "pending: waiting for owner confirmation" %>
   <%= f.button :submit, class: "btn-primary" %>
   <% end %>
 </div>

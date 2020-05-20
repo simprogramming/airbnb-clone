@@ -1,5 +1,8 @@
-<h1>Here are all the bookings</h1>
+<!-- this page is worthless -->
+
+
+<h1>Here are all the Bookings Requests</h1>
 <% @bookings.each do |booking| %>
-  <p><%= link_to booking.description , '#' %></p>
-  <% end %>
+  <p><%= link_to booking.description, listing_booking_path(booking.listing_id, booking.id) %></p>
+<% end %>
 
