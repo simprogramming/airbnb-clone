@@ -15,15 +15,33 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
     if @listing.save
-      redirect_to bookings_path
+      redirect_to listings_path
     else
       render 'new'
     end
   end
 
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+
+  def update
+    @listing = Listing.find(params[:id])
+    @listing.update(listing_params)
+
+    redirect_to listing_path(@listing)
+  end
+
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+
+    redirect_to listing_path
+  end
+
   private
 
   def listing_params
-    params.require(:listing).permit(:title, :url, :price, :capacity, :description, :category, :address, :city)
+    params.require(:listing).permit(:title, :url, :price, :capacity, :description, :category, :address, :city, photos: [])
   end
 end

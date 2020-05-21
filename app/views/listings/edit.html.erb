@@ -1,7 +1,6 @@
 <div class='container border-radius'>
   <div class='title text-center'>
-    <h1>So You want to host a location for future events?</h1>
-    <p>No problem! Fill out the form below to let others know more about your location.</p>
+    <h1>Modify location's info below</h1>
   </div>
 </div>
 <div class="container form">
@@ -9,7 +8,7 @@
     <div class="col-md-8">
       <%= simple_form_for @listing do |f| %>
         <%= f.input :title, placeholder: 'Golf Club'%>
-        <%= f.input :category, collection: ['Restaurant', 'Golf Club', 'Castle', 'Hotel Hall'] %>
+        <%= f.input :category, collection: ['Restaurant', 'Golf Club'] %>
         <%= f.input :price, label: 'Price/day', placeholder: '1500$' %>
         <%= f.input :address, placeholder: '555 Ave Park, h4h 2b2' %>
         <%= f.input :city, placeholder: 'Montreal' %>
