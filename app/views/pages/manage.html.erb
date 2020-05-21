@@ -15,7 +15,9 @@
   <p>You have no pending requests</p>
 <% else %>
   <% @requests.each do |booking| %>
-    <p> You have a pending request for <%= booking.listing.title %> from <%= booking.user.email %></p>
+    <p> You have a pending request for <strong><%= booking.listing.title %></strong> from <%= booking.user.email %></p>
+
+
     <p><%= link_to "Respond", manage_confirm_path %></p>
   <% end %>
 <% end %>
