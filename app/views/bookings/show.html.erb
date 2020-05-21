@@ -1,22 +1,24 @@
-<div class="text-align-center">
-  <h1>Booking's Description: <br> <%= @booking.description %></h1>
+<h1 class="text-center my-5">Your Booking</h1>
 
+<div class="container border p-3 m-4">
+  <div class="d-flex justify-content-around">
+    <h2>Description: <br> <%= @booking.description %></h2>
 
-  <h2>Booking's State: <br> <%= @booking.state %></h2>
+    <h2>State: <br> <%= @booking.state %></h2>
+  </div>
 
-  <h2>Affiliated Owner: <br> Mr/Mrs: <%= @booking.listing.user_id %></h2>
-
-  <h2>Affiliated Listing: <br> <%= @booking.listing.title %></h2>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @booking.listing.url %>)">
+  <div class="container m-4">
+    <div class="row ">
+      <div class="col-12 col-md-4 ">
+        <div class="card-category my-3 justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @booking.listing.url %>)">
         </div>
       </div>
     </div>
   </div>
 
+  <h2>Affiliated Listing: <br> <%= @booking.listing.title %></h2>
+  <h2>Owner: <br> <%= @booking.listing.user.email %></h2>
 
   <%= link_to "Home", root_path%>
+  <%#= link_to "Edit", root_path%>
 </div>

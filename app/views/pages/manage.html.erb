@@ -1,25 +1,28 @@
-<h1>here is a page where users can see and manage their current bookings, and listings</h1>
-
-<h2>Current Bookings: </h2>
-<% current_user.bookings.each do |booking| %>
-  <p><%= link_to booking.description, listing_booking_path(booking.listing_id, booking.id) %></p>
-<% end %>
-
-<h2>Current Listings: </h2>
-<% current_user.listings.each do |listing| %>
-  <p><%= link_to listing.title, listing_path(listing)%></p>
-<% end %>
-
-<h2>Current requests: </h2>
-<% if @requests.size == 0  %>
-  <p>You have no pending requests</p>
-<% else %>
-  <% @requests.each do |booking| %>
-    <p> You have a pending request for <strong><%= booking.listing.title %></strong> from <%= booking.user.email %></p>
-
-
-    <p><%= link_to "Respond", manage_confirm_path %></p>
-  <% end %>
-<% end %>
-
+<h1 class="text-center my-5">Manage your current bookings, listings, and pending requests</h1>
+<div class="d-flex justify-content-between border p-3 m-4">
+  <div>
+    <h4>Bookings: </h4> <br>
+    <% current_user.bookings.each do |booking| %>
+      <p><%= link_to booking.description, listing_booking_path(booking.listing_id, booking.id) %></p>
+      <p><%=  %></p>
+    <% end %>
+  </div>
+  <div>
+    <h4>Listings: </h4> <br>
+    <% current_user.listings.each do |listing| %>
+      <p><%= link_to listing.title, listing_path(listing)%></p>
+    <% end %>
+  </div>
+  <div>
+    <h4>Requests: </h4> <br>
+    <% if @requests.size == 0  %>
+      <p>You have no pending requests</p>
+    <% else %>
+      <% @requests.each do |booking| %>
+        <p> You have a pending request for <strong><%= booking.listing.title %></strong> from <%= booking.user.email %></p>
+        <p><%= link_to "Respond", edit_booking_path(booking.id) %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
