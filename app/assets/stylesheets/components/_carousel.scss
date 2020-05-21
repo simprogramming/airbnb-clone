@@ -1,0 +1,11 @@
+.carousel {
+    height: 400px;
+    width: 400px;
+    
+    .carousel-item img{
+        height: 400px;
+        object-fit: cover;
+        border-radius: 5px;
+        background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    }
+}
