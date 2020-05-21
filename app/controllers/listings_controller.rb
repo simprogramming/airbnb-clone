@@ -45,7 +45,7 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @listing.destroy
 
-    redirect_to listing_path
+    redirect_to listings_path
   end
 
   private

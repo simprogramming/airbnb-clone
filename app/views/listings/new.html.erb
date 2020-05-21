@@ -9,9 +9,9 @@
     <div class="col-md-8">
       <%= simple_form_for @listing do |f| %>
         <%= f.input :title, placeholder: 'Golf Club'%>
-        <%= f.input :category, collection: ['Restaurant', 'Golf Club', 'Castle', 'Hotel Hall'] %>
+        <%= f.input :category, collection: ['Restaurant', 'Golf', 'Castle', 'Hotel', 'Bar/Club', 'Terrasse', 'Mansion', 'Apartment', 'Villa', 'Penthouse' ,'Other' ] %>
         <%= f.input :price, label: 'Price/day', placeholder: '1500$' %>
-        <%= f.input :address, placeholder: '555 Ave Park, h4h 2b2' %>
+        <%= f.input :address, placeholder: '555 Park Ave, QC H4B 3B3' %>
         <%= f.input :city, placeholder: 'Montreal' %>
         <%= f.input :capacity, placeholder: '20+'%>
         <%= f.input :description, as: :text, placeholder: 'Nice location to host corporate events..' %>

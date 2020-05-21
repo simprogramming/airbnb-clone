@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RbnbClone</title>
+    <title>Eventialize</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +12,7 @@
 
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <a class="navbar-brand website-logo rounded" href="/"> <%= image_tag "https://media.glassdoor.com/sqll/2965428/entr-squarelogo-1565745108514.png" %> Entr.</a>
+      <a class="navbar-brand website-logo avatar" href="/"> <%= image_tag "https://www.printableparadise.com/letters/printable-letter-e-silhouette.png" %> Eventialize</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
@@ -28,6 +28,7 @@
             <li class="nav-item dropdown">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <%= link_to "Notification", '#', class: "dropdown-item" %>
                 <%= link_to "My Listings", listings_path, class: "dropdown-item" %>
                 <%= link_to "Manage", manage_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
