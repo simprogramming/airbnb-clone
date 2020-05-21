@@ -6,7 +6,7 @@
 
       <%= simple_form_for @listing do |f| %>
         <%= f.input :title, placeholder: 'Golf Club'%>
-        <%= f.input :category %>
+        <%= f.input :category, collection: ['Restaurant', 'Golf Club'] %>
         <%= f.input :price, label: 'Price/day', placeholder: '1500$' %>
         <%= f.input :address, placeholder: '555 Ave Park, h4h 2b2' %>
         <%= f.input :city, placeholder: 'Montreal' %>

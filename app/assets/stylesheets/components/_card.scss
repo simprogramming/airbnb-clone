@@ -12,3 +12,13 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.text-white a {
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  text-decoration: none;
+}
+
+.text-white a:hover {
+  opacity: .8;
+}
