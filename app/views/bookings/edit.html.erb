@@ -1,0 +1,27 @@
+<h1>Confirm Booking</h1>
+
+
+  <p>Informations related to the booking of <%= @booking.listing.title %>, from: <%= @booking.user.email %> </p>
+  <p> Description: <%= @booking.description %></p>
+  <p> Attendance: <%= @booking.attendance %></p>
+    <div class="form">
+      <%= simple_form_for @booking do |f| %>
+
+
+      <%#= f.hidden_field :user_id, value: @listing.user_id %>
+      <%= f.hidden_field :state, value: "Confirmed" %>
+      <%= f.submit "Accept", class: "btn-primary" %>
+      <% end %>
+    </div>
+    <div class="form">
+      <%= simple_form_for @booking do |f| %>
+
+
+      <%#= f.hidden_field :user_id, value: @listing.user_id %>
+      <%= f.hidden_field :state, value: "Declined" %>
+      <%= f.submit "Decline", class: "btn-primary" %>
+      <% end %>
+    </div>
+
+
+
