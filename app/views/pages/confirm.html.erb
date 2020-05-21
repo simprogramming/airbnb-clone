@@ -1,5 +1,14 @@
-<h3>Accept/Decline the booking request:</h3>
-<div>
-  <p class="btn btn-success">Accept</p>
-  <p class="btn btn-danger">Decline</p>
-</div>
+<h3>Booking Requests:</h3>
+
+<% @requests.each do |booking| %>
+  <p>Informations related to the booking of <%= booking.listing.title %>, from: <%= booking.user.email %> </p>
+  <p> Description: <%= booking.description %></p>
+  <p> Attendance: <%= booking.attendance %></p>
+
+    <div>
+      <p class="btn btn-success">Accept</p>
+      <p class="btn btn-danger">Decline</p>
+    </div>
+
+  <% end %>
+
