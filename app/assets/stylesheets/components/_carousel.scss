@@ -1,11 +1,84 @@
 .carousel {
     height: 400px;
     width: 400px;
-    
+
     .carousel-item img{
         height: 400px;
         object-fit: cover;
         border-radius: 5px;
         background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
     }
+}
+
+.carouselsquare {
+    height: 400px;
+    width: 400px;
+    .carouselhome-item img{
+        height: 400px;
+        object-fit: cover;
+        border-radius: 5px;
+        background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+    }
+}
+.carouselshow {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+    .carouselshow-item img{
+        height: 90vh;
+        object-fit: cover;
+    }
+    .btn{
+        position: absolute;
+        bottom: 10%;
+        right: 3%;
+        color: white;
+        border: 1px solid white;
+        padding: 8px 24px;
+        border-radius: 50px;
+        font-weight: lighter;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        z-index: 10000000;
+        background-color: #2fc4b2;
+        margin-right: 40px;
+    }
+    .btn:hover {
+        opacity: 1;
+    }
+    .information{
+        position: absolute;
+        bottom: 3%;
+        left: 3%;
+        font-size: 20px;
+        color: white;
+        z-index: 999;
+    }
+    .fa-user-friends{
+        margin-left: 20px;
+    }
+    h1{
+        position: absolute;
+        bottom: 18%;
+        left: 7%;
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        z-index: 999;
+    }
+}
+.carousel-control-next{
+    z-index: 998;
+}
+.carousel-control-prev{
+    z-index: 998;
+}
+.carousel-indicators{
+    z-index: 998;
+}
+.description{
+    font-size: 21px;
+    background-color: white;
 }

@@ -1,266 +1,256 @@
-<div class="banner">
-    <h1>Find your place for your events</h1>
-    <div class="container">
-      <form novalidate="novalidate" class="simple_form search" action="/listings" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> Search
-          </button>
+<div class="home">
+  <div class="banner">
+      <h1>Find your place for your events</h1>
+      <div class="container">
+        <form novalidate="novalidate" class="simple_form search" action="/listings" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <div class="search-form-control form-group">
+            <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+            <button name="button" type="submit" class="btn btn-flat">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        </form>
+      </div>
+  </div>
+  <h1 class="m-5">Cities</h1>
+  <div class="carousel-cards mt-5">
+    <div id="carousel1" class="carousel carouselsquare slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carouselhome-item carousel-item active position-relative">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Paris
+            </p>
+          <% end %>
+          <img src="<%= image_path("paris.jpg")%>" class="d-block w-100" alt="...">
         </div>
-      </form>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Hong-Kong
+            </p>
+          <% end %>
+          <img src="<%= image_path("hk.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Berlin
+            </p>
+          <% end %>
+          <img src="<%= image_path("berlin.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
+    <div id="carousel2" class="carousel carouselsquare slide carousel-fade position-relative" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carouselhome-item carousel-item active">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              New-York
+            </p>
+          <% end %>
+          <img src="<%= image_path("newyork.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Amsterdam
+            </p>
+          <% end %>
+          <img src="<%= image_path("amsterdam.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Dubaï
+            </p>
+          <% end %>
+          <img src="<%= image_path("dubai.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div id="carousel3" class="carousel carouselsquare slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carouselhome-item carousel-item active position-relative">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              London
+            </p>
+          <% end %>
+          <img src="<%= image_path("london.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Sydney
+            </p>
+          <% end %>
+          <img src="<%= image_path("sydney.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Tokyo
+            </p>
+          <% end %>
+          <img src="<%= image_path("tokyo.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <h1 class="m-5">Types</h1>
+  <div class="carousel-cards mt-5">
+    <div id="carousel4" class="carousel carouselsquare slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carouselhome-item carousel-item active position-relative">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Apartment
+            </p>
+          <% end %>
+          <img src="<%= image_path("apartment.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Villa
+            </p>
+          <% end %>
+          <img src="<%= image_path("villa.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Castle
+            </p>
+          <% end %>
+          <img src="<%= image_path("castle.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel4" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div id="carousel5" class="carousel carouselsquare slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carouselhome-item carousel-item active position-relative">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Mansion
+            </p>
+          <% end %>
+          <img src="<%= image_path("mansion.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Terrace
+            </p>
+          <% end %>
+          <img src="<%= image_path("terrace.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Golf Club
+            </p>
+          <% end %>
+          <img src="<%= image_path("golf.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel5" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel5" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div id="carousel6" class="carousel carouselsquare slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carouselhome-item carousel-item active position-relative">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Bar
+            </p>
+          <% end %>
+          <img src="<%= image_path("bar.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Restaurant
+            </p>
+          <% end %>
+          <img src="<%= image_path("restaurant.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carouselhome-item carousel-item">
+          <div class="coolgradient"></div>
+          <%= link_to "/" do %>
+            <p class="card-title">
+              Club
+            </p>
+          <% end %>
+          <img src="<%= image_path("club.jpg")%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel6" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel6" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <%= link_to "index", listings_path %>
 </div>
-
-<h1 class="m-5">Cities</h1>
-
-<div class="carousel-cards mt-5">
-  <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active position-relative">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Paris
-          </p>
-        <% end %>
-        <img src="<%= image_path("paris.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Hong-Kong
-          </p>
-        <% end %>
-        <img src="<%= image_path("hk.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Berlin
-          </p>
-        <% end %>
-        <img src="<%= image_path("berlin.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <div id="carousel2" class="carousel slide carousel-fade position-relative" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            New-York
-          </p>
-        <% end %>
-        <img src="<%= image_path("newyork.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Amsterdam
-          </p>
-        <% end %>
-        <img src="<%= image_path("amsterdam.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Dubaï
-          </p>
-        <% end %>
-        <img src="<%= image_path("dubai.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <div id="carousel3" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active position-relative">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            London
-          </p>
-        <% end %>
-        <img src="<%= image_path("london.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Sydney
-          </p>
-        <% end %>
-        <img src="<%= image_path("sydney.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Tokyo
-          </p>
-        <% end %>
-        <img src="<%= image_path("tokyo.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
-
-
-
-<h1 class="m-5">Types</h1>
-
-<div class="carousel-cards mt-5">
-  <div id="carousel4" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active position-relative">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Apartment
-          </p>
-        <% end %>
-        <img src="<%= image_path("apartment.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Villa
-          </p>
-        <% end %>
-        <img src="<%= image_path("villa.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Castle
-          </p>
-        <% end %>
-        <img src="<%= image_path("castle.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel4" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <div id="carousel5" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active position-relative">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Mansion
-          </p>
-        <% end %>
-        <img src="<%= image_path("mansion.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Terrace
-          </p>
-        <% end %>
-        <img src="<%= image_path("terrace.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Golf Club
-          </p>
-        <% end %>
-        <img src="<%= image_path("golf.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel5" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel5" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <div id="carousel6" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active position-relative">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Bar
-          </p>
-        <% end %>
-        <img src="<%= image_path("bar.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Restaurant
-          </p>
-        <% end %>
-        <img src="<%= image_path("restaurant.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <div class="coolgradient"></div>
-        <%= link_to "/" do %>
-          <p class="card-title">
-            Club
-          </p>
-        <% end %>
-        <img src="<%= image_path("club.jpg")%>" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel6" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel6" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
-<%= link_to "index", listings_path %>
