@@ -1,24 +1,23 @@
-<h1 class="text-center my-5">Your Booking</h1>
+<div class="container text-center">
+  <h1 class="text-center my-5">Your Booking</h1>
 
-<div class="container border p-3 m-4">
-  <div class="d-flex justify-content-around">
-    <h2>Description: <br> <%= @booking.description %></h2>
+  <div class="container border p-5 m-4">
+    <div class="d-flex justify-content-around">
+      <h2>Description: <br> <%= @booking.description %></h2>
 
-    <h2>State: <br> <%= @booking.state %></h2>
-  </div>
+      <h2>State: <br> <%= @booking.state%></h2>
+    </div>
+    <div class="d-flex align-items-center justify-content-around">
+      <div class="container">
+            <%= cl_image_tag @booking.listing.photos.first.key, height: 300, width: 400, crop: :fill %>
+            <!-- <div class="card-category my-3 justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @booking.listing.photos.first %>)"> -->
+            <!-- </div> -->
+      </div>
 
-  <div class="container m-4">
-    <div class="row ">
-      <div class="col-12 col-md-4 ">
-        <div class="card-category my-3 justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @booking.listing.url %>)">
-        </div>
+      <div class="text-left">
+        <h3>Affiliated Listing: <br> <%= link_to @booking.listing.title, listing_path(@booking.listing) %></h3>
+        <h3>Owner: <br> <%= @booking.listing.user.email %></h3>
       </div>
     </div>
   </div>
-
-  <h2>Affiliated Listing: <br> <%= @booking.listing.title %></h2>
-  <h2>Owner: <br> <%= @booking.listing.user.email %></h2>
-
-  <%= link_to "Home", root_path%>
-  <%#= link_to "Edit", root_path%>
 </div>
