@@ -9,7 +9,12 @@ class ListingsController < ApplicationController
         lng: listing.longitude
       }
     end
-    @listings = Listing.all
+
+    if params[:query].present?
+      @listings = Listing.where(city: params[:query])
+    else
+      @listings = Listing.all
+    end
   end
 
   def show
