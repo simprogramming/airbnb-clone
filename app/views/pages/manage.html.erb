@@ -1,28 +1,75 @@
 <h1 class="text-center my-5">Manage your current bookings, listings, and pending requests</h1>
-<div class="d-flex justify-content-between border p-3 m-4">
-  <div>
-    <h4>Bookings: </h4> <br>
-    <% current_user.bookings.each do |booking| %>
-      <p><%= link_to booking.description, listing_booking_path(booking.listing_id, booking.id) %></p>
-      <p><%=  %></p>
-    <% end %>
+
+<div class="py-4 px-5 mx-5 ">
+
+  <div id="accordion" class=" d-flex flex-column align-items-center">
+    <div class="card mt-3" style="width: 80%;">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link text-secondary" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            My Bookings
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body mx-4">
+          <% if current_user.bookings.size == 0  %>
+            <p class="text-dark mb-0">You have no pending bookings</p>
+          <% else %>
+            <% current_user.bookings.each do |booking| %>
+            <p><%= link_to booking.description, listing_booking_path(booking.listing_id, booking.id), class: "text-dark" %></p>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-3" style="width: 80%;">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed text-secondary" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            My Listings
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body mx-4">
+          <% if current_user.listings.size == 0  %>
+            <p class="text-dark mb-0">You have no pending listings</p>
+         <% else %>
+            <% current_user.listings.each do |listing| %>
+            <p><%= link_to listing.title, listing_path(listing), class: "text-dark"%></p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="card my-3" style="width: 80%;">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed text-secondary" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            My Requests
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body mx-4">
+          <% if @requests.size == 0  %>
+            <p class="text-dark mb-0">You have no pending requests</p>
+          <% else %>
+            <% @requests.each do |booking| %>
+            <p> You have a pending request for <strong><%= booking.listing.title %></strong> from <%= booking.user.email%></p>
+            <p><%= link_to "Respond", edit_booking_path(booking.id), class: "text-dark" %></p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <h4>Listings: </h4> <br>
-    <% current_user.listings.each do |listing| %>
-      <p><%= link_to listing.title, listing_path(listing)%></p>
-    <% end %>
-  </div>
-  <div>
-    <h4>Requests: </h4> <br>
-    <% if @requests.size == 0  %>
-      <p>You have no pending requests</p>
-    <% else %>
-      <% @requests.each do |booking| %>
-        <p> You have a pending request for <strong><%= booking.listing.title %></strong> from <%= booking.user.email %></p>
-        <p><%= link_to "Respond", edit_booking_path(booking.id) %></p>
-      <% end %>
-    <% end %>
-  </div>
+</div>
+
+<div class="ml-5 mt-3">
+  <%= link_to "Manage Page", manage_path %> <br>
+  <%= link_to "Home", root_path %>
 </div>
 
